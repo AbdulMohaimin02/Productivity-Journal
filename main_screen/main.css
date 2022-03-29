@@ -179,3 +179,58 @@ transform: rotate(90deg);
     }
 }
 
+
+.card {
+/* adds shadow and transition to create card effect*/
+transition: 0.3s;
+border-radius: 25px;
+/* width: 100%; */
+height: 250px;
+padding: 25px;
+background-color: #e57f84;
+border: 2px solid rgb(0, 0, 0);
+font-size: 20px;
+cursor: pointer;
+}
+
+.card:hover {
+/* deeper shadow when hovered */
+box-shadow: 0 8px 16px 0 rgba(12, 11, 11, 0.2);
+}
+
+.button {
+background-color: #4297A0;
+border-radius: 1rem;
+padding:  0 1rem;
+margin-left: 13rem;
+color: #F4EAE6;
+font-size: 3rem;
+font-family: "Poppins", sans-serif;
+border: 3px solid black;
+cursor: pointer;
+}
+
+.grid {
+display: grid;
+gap: 50px;
+grid-template-columns: repeat(auto-fit, 250px);
+justify-content: center;
+margin-left: 5rem;
+margin-right: 5rem;
+}
+
+h1.titles {
+text-align: center;
+font-family: "Poppins", sans-serif;
+font-size: 4rem;
+margin-bottom: 3rem;
+color: black;
+}
+
+
+.h2 {
+font-size: 2rem;
+margin: 3rem 13rem;
+font-family: "Poppins", sans-serif;
+}
+
