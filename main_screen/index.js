@@ -24,12 +24,14 @@ divs.forEach((el) =>
   })
 );
 
-function addNewNote() {
-  const node = document.createElement("div");
-  node.innerHTML =
-    '<div class="card"><h4> summer trip </h4> <p>Lorem Ipsum.....</p> </div>';
-  document.getElementById("myNotes").prepend(node);
-}
+
+// Commented out as we will deal with adding stuff to database on the update screen
+// function addNewNote() {
+//   const node = document.createElement("div");
+//   node.innerHTML =
+//     '<div class="card"><h4> summer trip </h4> <p>Lorem Ipsum.....</p> </div>';
+//   document.getElementById("myNotes").prepend(node);
+// }
 
 const menu_toggle = document.querySelector('.menu-toggle')
 const sidebar = document.querySelector('.sidebar');

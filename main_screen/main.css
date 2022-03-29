@@ -155,6 +155,7 @@ transform: rotate(90deg);
     width: 100%;
     max-width: 350px;
     transition: 0.2s linear;
+    z-index: 2;
 }
 .sidebar .menu .menu-item .menu-button{
     width: 15rem;
@@ -188,6 +189,7 @@ padding: 25px;
 background-color: #e57f84;
 border: 2px solid rgb(0, 0, 0);
 font-size: 20px;
+cursor: pointer;
 }
 
 .card:hover {
@@ -204,6 +206,7 @@ color: #F4EAE6;
 font-size: 3rem;
 font-family: "Poppins", sans-serif;
 border: 3px solid black;
+cursor: pointer;
 }
 
 .grid {
