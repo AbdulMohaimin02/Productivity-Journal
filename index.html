@@ -1,19 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Productivity App</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body >
-    <div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Poppins Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <title>My Notes</title>
+    <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="main.css">
+    
+</head>
+<body>
+    <div class="app">
+
+        <div class="menu-toggle">
+            <div class="hamburger">
+                <span></span>
+            </div>
+        </div>
+
+
+        <aside class="sidebar">
+            <h3>Files</h3>
+            
+            <nav class="menu">
+                <a href="#" class = "menu-item is-active">
+                    <button class="menu-button">Home</button>
+                </a>
+                <a href="#" class = "menu-item">
+                    <button class="menu-button">Ideas for Weekend</button>
+                </a>
+                <a href="#" class = "menu-item">
+                    <button class="menu-button">Work Notes</button>
+                </a>
+                <a href="#" class = "menu-item">
+                    <button class="menu-button">Presentation</button>
+                </a>
+
+            </nav>
+
+        </aside>
+        <main class="content">
+            <div>
       <header>
         <h1 class="titles">My Notes</h1>
       </header>
@@ -62,6 +95,19 @@
 
         </div>
     </div>
-    <script src="index.js"></script>
-  </body>
+   
+        </main>
+    </div>
+    <script>
+        const menu_toggle = document.querySelector('.menu-toggle')
+        const sidebar = document.querySelector('.sidebar');
+
+        menu_toggle.addEventListener('click', () => {
+            menu_toggle.classList.toggle('is-active');
+            sidebar.classList.toggle('is-active');
+        })
+        <script src="index.js"></script>
+    </script>
+</body>
 </html>
+
