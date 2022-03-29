@@ -30,3 +30,11 @@ function addNewNote() {
     '<div class="card"><h4> summer trip </h4> <p>Lorem Ipsum.....</p> </div>';
   document.getElementById("myNotes").prepend(node);
 }
+
+const menu_toggle = document.querySelector(".menu-toggle");
+const sidebar = document.querySelector(".sidebar");
+
+menu_toggle.addEventListener("click", () => {
+  menu_toggle.classList.toggle("is-active");
+  sidebar.classList.toggle("is-active");
+});
