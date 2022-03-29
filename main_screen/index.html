@@ -10,8 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+
     <title>My Notes</title>
-    <link rel="stylesheet" href="index.css"/>
     <link rel="stylesheet" href="main.css">
     
 </head>
@@ -52,69 +56,51 @@
       </header>
       <!-- main page content goes here-->
       <main>
-        <button type="button" class="button" onclick="addNewNote()"> + </button>
+
+        <a href="../update_screen/update_screen.html">
+            <button type="button" class="button"> + </button>
+        </a>
+        
+
+
         <h2 class="h2">Recent Notes</h2>
 
       
         <div class="grid" id="myNotes"> 
 
-            <div class="card">
-                <div class="buttonStyle">
-                    <h4>Ideas for weekend</h4>
-                    <button type="button" class="exitButton" aria-label="Close 'Ideas for weekend'" data-close="">&times;</button>
-                </div>
+            <div class="card" dataOpen="false">
+                
+                <h4>Ideas for weekend</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
             </div>
             
             
-            <div class="card">
-              <div class="buttonStyle">
-                  <h4>Work Notes</h4>
-                  <button type="button" class="exitButton" aria-label="Close 'Ideas for weekend'" data-close="">&times;</button>
-              </div>
+            <div class="card" dataOpen="false">
+                <h4>Work Notes</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
             </div>
             
-            <div class="card">
-              <div class="buttonStyle">
+            <div class="card" dataOpen="false">
                 <h4>Shopping list</h4>
-                <button type="button" class="exitButton" aria-label="Close 'Ideas for weekend'" data-close="">&times;</button>
-              </div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
             </div>
             
-            <div class="card">
-              <div class="buttonStyle">
+            <div class="card" dataOpen="false">
               <h4>Presentation</h4>
-              <button type="button" class="exitButton" aria-label="Close 'Ideas for weekend'" data-close="">&times;</button>
-            </div>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
           </div>
-
-          <div class="card">
-            <div class="buttonStyle">
+          <div class="card" dataOpen="false">
             <h4>Gift ideas</h4>
-            <button type="button" class="exitButton" aria-label="Close 'Ideas for weekend'" data-close="">&times;</button>
-          </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
         </div>
-
-
-        <div class="card">
-          <div class="buttonStyle">
+        <div class="card" dataOpen="false">
           <h4>Art supplies I need</h4>
-          <button type="button" class="exitButton" aria-label="Close 'Ideas for weekend'" data-close="">&times;</button>
-        </div>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
       </div>
-
-
-      <div class="card">
-        <div class="buttonStyle">
+      <div class="card" dataOpen="false">
         <h4>Financial budget</h4>
-        <button type="button" class="exitButton" aria-label="Close 'Ideas for weekend'" data-close="">&times;</button>
-      </div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+    </div>
         </div>
 
         </div>
