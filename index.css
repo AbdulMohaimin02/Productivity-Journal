@@ -9,11 +9,31 @@
   background-color: #e57f84;
   border: 2px solid rgb(82, 76, 76);
   font-size: 20px;
+  transition: all 100ms;
+  overflow: hidden;
 }
 
 .card:hover {
   /* deeper shadow when hovered */
   box-shadow: 0 8px 16px 0 rgba(12, 11, 11, 0.2);
+}
+
+.card button {
+  display: none;
+}
+
+.card.open {
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  height: 80%;
+  position: fixed;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+}
+
+.card.open button {
+  display: inline;
 }
 
 .button {
@@ -44,4 +64,19 @@
 .h2 {
   margin: 3rem 8.5rem;
   font-family: "Poppins", sans-serif;
+}
+
+.buttonStyle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.exitButton {
+  background-color: #2f5061;
+  padding: 10px;
+  color: white;
+  font-size: 25px;
+  border-radius: 20px;
 }

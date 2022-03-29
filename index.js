@@ -1,28 +1,28 @@
-const divs = document.querySelectorAll(".card");
-divs.forEach((el) =>
-  el.addEventListener("click", (event) => {
-    if (el !== event.target) return;
-    if (event.target.getAttribute("dataOpen") === "false") {
-      event.target.setAttribute("dataOpen", "true");
-      event.target.style.top = "20px";
-      event.target.style.bottom = "20px";
-      event.target.style.left = "20px";
-      event.target.style.right = "20px";
-      event.target.style.height = "100%";
-      event.target.style.position = "fixed";
-      event.target.style.zIndex = "1";
-    } else {
-      event.target.setAttribute("dataOpen", "false");
-      event.target.style.top = "0px";
-      event.target.style.bottom = "0px";
-      event.target.style.left = "0px";
-      event.target.style.right = "0px";
-      event.target.style.height = "250px";
-      event.target.style.position = "relative";
-      event.target.style.zIndex = "0";
-    }
-  })
-);
+const grid = document.querySelector("#myNotes");
+
+grid.addEventListener("click", (event) => {
+  const card = event.target.closest(".card");
+  if (!card) return;
+
+  const isCloseButton = event.target.hasAttribute("data-close");
+
+  if (isCloseButton) {
+    card.classList.remove("open");
+  } else {
+    card.classList.add("open");
+  }
+});
+
+document.documentElement.addEventListener("mousedown", (event) => {
+  const isInsideGrid = grid.contains(event.target);
+  if (isInsideGrid) return;
+
+  const openNote = document.querySelector(".card.open");
+  if (!openNote) return;
+
+  const card = openNote.closest(".card");
+  card.classList.remove("open");
+});
 
 function addNewNote() {
   const node = document.createElement("div");
