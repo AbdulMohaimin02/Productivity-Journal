@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
     <title>My Notes</title>
+    <link rel="stylesheet" href="index.css"/>
     <link rel="stylesheet" href="main.css">
+    
 </head>
 <body>
     <div class="app">
@@ -43,16 +46,56 @@
 
         </aside>
         <main class="content">
-            <h1>Welcome Human</h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
-                culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            <div>
+      <header>
+        <h1 class="titles">My Notes</h1>
+      </header>
+      <!-- main page content goes here-->
+      <main>
+        <button type="button" class="button" onclick="addNewNote()"> + </button>
+        <h2 class="h2">Recent Notes</h2>
+
+      
+        <div class="grid" id="myNotes"> 
+
+            <div class="card" dataOpen="false">
+                
+                <h4>Ideas for weekend</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+            </div>
+            
+            
+            <div class="card" dataOpen="false">
+                <h4>Work Notes</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+            </div>
+            
+            <div class="card" dataOpen="false">
+                <h4>Shopping list</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+            </div>
+            
+            <div class="card" dataOpen="false">
+              <h4>Presentation</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+          </div>
+          <div class="card" dataOpen="false">
+            <h4>Gift ideas</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+        </div>
+        <div class="card" dataOpen="false">
+          <h4>Art supplies I need</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+      </div>
+      <div class="card" dataOpen="false">
+        <h4>Financial budget</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+    </div>
+        </div>
+
+        </div>
+    </div>
+   
         </main>
     </div>
     <script>
@@ -63,6 +106,8 @@
             menu_toggle.classList.toggle('is-active');
             sidebar.classList.toggle('is-active');
         })
+        <script src="index.js"></script>
     </script>
 </body>
 </html>
+
