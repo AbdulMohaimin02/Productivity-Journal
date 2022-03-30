@@ -159,10 +159,10 @@ transform: rotate(90deg);
 
 @media (max-width: 1024px){
     .sidebar{
-        max-width: 250px
+        max-width: 300px
     }
     .sidebar .menu .menu-item .menu-button{
-        width: 10rem;
+        width: 12rem;
     }
     .sidebar h3{
         font-size: 4rem;
@@ -175,14 +175,12 @@ transform: rotate(90deg);
 
     }
     .sidebar .menu .menu-item .menu-button{
-        width: 10rem;
+        width: 12rem;
     }
     .sidebar h3{
         font-size: 4rem;
     }
 }
-
-
 
 
 
