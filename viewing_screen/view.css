@@ -8,7 +8,6 @@
 
 .app{
     display: flex;
-    min-height: 100vh;
 }
 
 .sidebar{
@@ -181,98 +180,15 @@ transform: rotate(90deg);
 }
 
 
-h1.titles {
+h1{
 text-align: center;
 font-family: "Poppins", sans-serif;
-font-size: 4rem;
+font-size: 3rem;
 margin-bottom: 3rem;
 color: black;
 }
 
-
-.card {
-    /* adds shadow and transition to create card effect*/
-    /* box-shadow: 5px 6px 3px 3px rgba(84, 81, 81, 0.2); */
-    transition: 0.3s;
-    border-radius: 25px;
-    /* width: 100%; */
-    height: 250px;
-    padding: 25px;
-    background-color: #c6e1f3;
-    border: 2px solid rgb(82, 76, 76);
-    font-size: 20px;
-    transition: all 100ms;
-    overflow: hidden;
-    cursor: pointer;
-}
-  
-.card:hover {
-    /* deeper shadow when hovered */
-    box-shadow: 0 8px 16px 0 rgba(12, 11, 11, 0.2);
-}
-  
-.card button {
-    display: none;
-}
-
-.card.open {
-    top: 50%;
-    left: 50%;
-    width: 70%;
-    height: 80%;
-    position: fixed;
-    z-index: 1;
-    transform: translate(-50%, -50%);
-}
-  
-.card.open button {
-    display: inline;
-}
-  
-.button {
-    background-color: #4297A0;
-    border-radius: 1rem;
-    padding:  0 1rem;
-    margin-left: 13rem;
-    color: #F4EAE6;
-    font-size: 3rem;
-    font-family: "Poppins", sans-serif;
-    border: 3px solid black;
-    cursor: pointer;
-}
-.grid {
-    display: grid;
-    gap: 50px;
-    grid-template-columns: repeat(auto-fit, 250px);
-    justify-content: center;
-    margin-left: 5rem;
-    margin-right: 5rem;
-}
-.titles {
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-    font-size: 45px;
-}
-.h2 {
-    font-size: 2rem;
-    margin: 3rem 13rem;
-    font-family: "Poppins", sans-serif;
-}
-  
-.buttonStyle {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 15px;
-}
-  
-.exitButton {
-    background-color: #4297A0;
-    padding: 0.5rem 1rem;
-    color: #F4EAE6;
-    font-size: 2rem;
-    border-radius: 1rem;
-    border: 3px solid black;
-    cursor: pointer;
+p{
+    padding: 0 10rem;
 }
 
