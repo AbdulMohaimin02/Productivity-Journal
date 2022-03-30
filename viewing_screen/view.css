@@ -168,7 +168,7 @@ transform: rotate(90deg);
 
 @media (max-width: 400px){
     .sidebar{
-        width: 300px;
+        width: 250px;
 
     }
     .sidebar .menu .menu-item .menu-button{
@@ -181,14 +181,19 @@ transform: rotate(90deg);
 
 
 h1{
-text-align: center;
-font-family: "Poppins", sans-serif;
-font-size: 3rem;
-margin-bottom: 3rem;
-color: black;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: black;
 }
 
 p{
     padding: 0 10rem;
 }
 
+@media (max-width: 750px){
+    p{
+        padding: 0 5rem;
+    }
+}
