@@ -23,8 +23,17 @@ function getNotesHTML({ id, name, info, createdAt, updatedAt}) {
   <div class="card">
     <div class="buttonStyle">
       <h4>${name}</h4>
-        <button type="button" class="exitButton" aria-label="Close '${name}'"
-          data-close="">&times;</button>
+        <div class = "cardButtons">
+        
+          <button type="button" class="exitButton" aria-label="Close '${name}'"
+            data-close="">close</button>
+
+          <a href ="../update_screen/update_screen.html?id=${id}" >
+            <button type="button" class="editButton" aria-label="Edit '${name}'"
+            data-edit="" >edit</button>
+          </a>
+
+        </div>
     </div>
     <p> ${info}</p>
   </div>

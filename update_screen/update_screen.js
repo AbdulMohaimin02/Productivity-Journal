@@ -1,91 +1,131 @@
 import DOMPurify from "https://cdn.jsdelivr.net/npm/dompurify@2/dist/purify.es.min.js";
 // import { getJSON, serialize, stringToHTML } from "../data/utils.js";
-// import notes, { API } from "../data/data.js";
+import notes, { API } from "../data/data.js";
 
 
 const app = document.querySelector("#app");
 
 function main() {
-    if (restaurants instanceof Error) {
-      app.textContent = "There was a problem. Try again later.";
-      console.error(restaurants);
-    } else {
-      // Listen for submit events
-      app.addEventListener("submit", handleSubmit);
+  if (notes instanceof Error) {
+    app.textContent = "There was a problem. Try again later.";
+    console.error(notes);
+  } else {
+
+    var currentId = getNotesId()
+    var currentNote = notes.find(note => Number(note.id) === Number(currentId))
+    var currentArray = [currentNote]
+    console.log(currentArray[0])
+    // Insert the HTML string
   
-      // Insert the HTML string
-      app.innerHTML = `${getFormHTML()}`;
-    }
+    app.innerHTML = `
+        ${DOMPurify.sanitize(currentArray.map(getUpdateHTML))}
+    `;
+  }
 }
 
 
-function getFormHTML() {
-    return
-    `
-    <form action="" method="POST">
+function getNotesId() {
+  const params = new URLSearchParams(window.location.search);
+  return Number(params.get("id"));
+}
+
+
+function getUpdateHTML({ id, name, info, createdAt, updatedAt}) {
+    return`
+    <form action="http://localhost:3000/notes/${id}" id ="update">
         <h1>Title</h1>
 
         <p>
-            <input id="noteTitle" name="noteTitle" type="text" required />
+            <input id="name" name="name" type="text" required  value ="${name}"/>
         </p>
 
         <h1>Note</h1>
 
         <p>
-            <input id="noteContent" name="noteContent" required />
+            <input id="info" name="info" required value = "${info}">
         </p>
 
         <p>
             <br>
-            <a href="../index/index.html">
-                <button type="submit">Create restaurant</button>
-            </a>
-        </p>
+                <div>
+                  <button type="submit">Update Note</button>
+                  <button type="reset">Delete Note</button>
+                </div>
+        </p>    
 
     </form>
     `
 }
 
-async function handleSubmit(event) {
-    // Prevent the default form submission behaviour
-    event.preventDefault();
-  
-    // The event.target is the element that fired the submit event
-    const form = event.target;
-  
-    // Serialize the form data into a JSON string
-    const body = serialize(form);
-  
-    // Destructure the .method and .action properties from the HTMLFormElement
-    const { method, action } = form;
-  
-    // We need to tell our server that we're sending JSON data
-    const headers = { "Content-Type": "application/json" };
-  
-    // Select the grid of restaurants from the HTML
-    const grid = document.querySelector(".grid");
-  
-    try {
-        // Post the form data to our server; this sends back the new restaurant
-        const response = await fetch(action, { method, headers, body });
+// const form = document.querySelector("#update");
 
-        // Parse the response into a real JavaScript object
-        const restaurantObject = await getJSON(response);
+/**
+ * Serialize all form data into a JSON string
+ * https://barker.codes/blog/serialize-form-data-into-a-json-string-in-vanilla-js/
+ * @param {HTMLFormElement} form The form to serialize
+ * @returns {String} The serialized form data
+ */
 
-        // Create an HTML string based on the restaurant object
-        const restaurantHTML = getRestaurantHTML(restaurantObject);
+function serialize(form) {
+  // Create a new FormData object
+  const formData = new FormData(form);
 
-        // Create a real HTML element from the HTML string
-        const restaurantElement = stringToHTML(restaurantHTML);
+  // Create an object to hold the name/value pairs
+  const pairs = {};
 
-        // Append the new restaurant element to the restaurant grid
-        grid.append(restaurantElement);
-    } catch (error) {
-        console.error(error);
-        alert("Failed to create restaurant. Try again later.");
-    }
-  
-    // Wipe the form
-    form.reset();
+  // Add each name/value pair to the object
+  for (const [name, value] of formData) {
+    pairs[name] = value;
   }
+
+  // Return the JSON string
+  return JSON.stringify(pairs, null, 2);
+}
+
+
+
+async function handleSubmit(event) {
+  event.preventDefault();
+
+  const form = event.target;
+  
+  const body = serialize(form);
+  const { action } = form;
+
+
+
+  const headers = { "Content-Type": "application/json" };
+
+  try {
+    await fetch(action, { method:"put", headers, body });
+    window.location.href = "../main_screen/index.html"
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+async function handelDelete(event){
+  event.preventDefault();
+
+  const form = event.target;
+
+  const { action } = form;
+  const headers = { "Content-Type": "application/json" };
+
+
+  try {
+    await fetch(action, { method:"delete"} );
+    window.location.href = "../main_screen/index.html"
+  } catch (error) {
+    console.error(error);
+  }
+
+
+}
+
+app.addEventListener("submit", handleSubmit);
+app.addEventListener("reset",handelDelete)
+
+main();
+
 

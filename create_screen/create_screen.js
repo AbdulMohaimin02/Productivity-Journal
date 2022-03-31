@@ -6,7 +6,8 @@ const form = document.querySelector("form");
  * @param {HTMLFormElement} form The form to serialize
  * @returns {String} The serialized form data
  */
- function serialize(form) {
+
+function serialize(form) {
   // Create a new FormData object
   const formData = new FormData(form);
 
