@@ -1,4 +1,4 @@
-// import DOMPurify from "https://cdn.jsdelivr.net/npm/dompurify@2/dist/purify.es.min.js";
+import DOMPurify from "https://cdn.jsdelivr.net/npm/dompurify@2/dist/purify.es.min.js";
 // import { getJSON, serialize, stringToHTML } from "./utils.js";
 // import notes, { API } from "./data.js";
 

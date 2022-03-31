@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link for style sheet -->
+    <link rel="stylesheet" href="create_screen.css">
+
+    <!-- Poppins Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    <form action="http://localhost:3000/notes" method="POST">
+        <h1>Title</h1>
+        <p>
+            <input id="name" name="name" type="text" required />
+        </p>
+        <h1>Note</h1>
+        <p>
+            <input id="info" name="info" required />
+        </p>
+        <p>
+            <br>
+
+            <button type="submit">Create Note</button>
+        </p>
+
+    </form>
+    <script src="../create_screen/create_screen.js" type = "module"></script>
+</body>
+</html>
