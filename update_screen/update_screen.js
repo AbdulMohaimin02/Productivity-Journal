@@ -98,7 +98,7 @@ async function handleSubmit(event) {
 
   try {
     await fetch(action, { method:"put", headers, body });
-    window.location.href = "../main_screen/index.html"
+    window.location.href = "../index.html"
   } catch (error) {
     console.error(error);
   }
@@ -115,7 +115,7 @@ async function handelDelete(event){
 
   try {
     await fetch(action, { method:"delete"} );
-    window.location.href = "../main_screen/index.html"
+    window.location.href = "../index.html"
   } catch (error) {
     console.error(error);
   }

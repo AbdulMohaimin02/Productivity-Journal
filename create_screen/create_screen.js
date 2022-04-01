@@ -35,7 +35,7 @@ async function handleSubmit(event) {
 
   try {
     await fetch(action, { method, headers, body });
-    window.location.href = "../main_screen/index.html"
+    window.location.href = "../index.html"
   } catch (error) {
     console.error(error);
   }
