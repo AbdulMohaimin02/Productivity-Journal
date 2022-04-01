@@ -1,3 +1,5 @@
+import "../nav.js"
+
 import DOMPurify from "https://cdn.jsdelivr.net/npm/dompurify@2/dist/purify.es.min.js";
 // import { getJSON, serialize, stringToHTML } from "./utils.js";
 import notes, { API } from "../data/data.js";
@@ -71,21 +73,6 @@ document.documentElement.addEventListener("mousedown", (event) => {
 });
 
 
-// Commented out as we will deal with adding stuff to database on the update screen
-// function addNewNote() {
-//   const node = document.createElement("div");
-//   node.innerHTML =
-//     '<div class="card"><h4> summer trip </h4> <p>Lorem Ipsum.....</p> </div>';
-//   document.getElementById("myNotes").prepend(node);
-// }
-
-const menu_toggle = document.querySelector('.menu-toggle')
-const sidebar = document.querySelector('.sidebar');
-
-menu_toggle.addEventListener('click', () => {
-  menu_toggle.classList.toggle('is-active');
-  sidebar.classList.toggle('is-active');
-})
 
 
 main();

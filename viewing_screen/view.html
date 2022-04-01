@@ -1,74 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Poppins Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Style sheet -->
-    <link rel="stylesheet" href="view.css">
+    <link rel="stylesheet" href="../global.css" />
+    <link rel="stylesheet" href="view.css" />
 
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="app">
-        <div class="menu-toggle">
-            <div class="hamburger">
-                <span></span>
-            </div>
+      <div class="menu-toggle">
+        <div class="hamburger">
+          <span></span>
         </div>
+      </div>
 
-        <aside class="sidebar">
-            <h3>Files</h3>
+      <aside class="sidebar">
+        <h3>Files</h3>
 
-            <nav class="menu">
-                <a href="../main_screen/index.html" class="menu-item is-active">
-                    <button class="menu-button">Home</button>
-                </a>
-                <a href="#" class="menu-item">
-                    <button class="menu-button">Ideas for Weekend</button>
-                </a>
-                <a href="#" class="menu-item">
-                    <button class="menu-button">Work Notes</button>
-                </a>
-                <a href="#" class="menu-item">
-                    <button class="menu-button">Presentation</button>
-                </a>
+        <nav class="menu">
+          <!-- Links get injected via JS -->
+          <a href="../index.html" class="menu-item">Home</a>
+        </nav>
+      </aside>
 
-            </nav>
-
-        </aside>
-
-        <main class="content">
-            <h1>Ideas for the Weekend</h1>
-
-            <p class = "note-text">
-                "Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt
-                ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi
-                ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit
-                in voluptate velit esse cillum dolore
-                eu fugiat nulla pariatur. Excepteur
-                sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt
-                mollit anim id est laborum."
-            </p>
-
-        </main>
-
+      <main class="content">
+        
+      </main>
     </div>
 
-    <script src="./view.js" type = "module"></script>
-</body>
-
+    <script src="./view.js" type="module"></script>
+  </body>
 </html>

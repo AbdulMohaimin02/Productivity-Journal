@@ -41,7 +41,7 @@ function getUpdateHTML({ id, name, info, createdAt, updatedAt}) {
 
         <h1>Note</h1>
 
-        <p>
+        <p class = "info">
             <input id="info" name="info" required value = "${info}">
         </p>
 
