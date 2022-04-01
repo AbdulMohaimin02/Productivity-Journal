@@ -32,7 +32,7 @@ function getNotesId() {
 
 function getUpdateHTML({ id, name, info, createdAt, updatedAt}) {
     return`
-    <form action="http://localhost:3000/notes/${id}" id ="update">
+    <form action="https://ad-productivity-app.herokuapp.com/notes/${id}" id ="update">
         <h1>Title</h1>
 
         <p>

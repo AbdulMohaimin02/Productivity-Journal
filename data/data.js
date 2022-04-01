@@ -1,6 +1,6 @@
 import { getJSON } from "./utils.js";
 
-const API = "http://localhost:3000/notes";
+const API = "https://ad-productivity-app.herokuapp.com/notes";
 
 let notes;
 
