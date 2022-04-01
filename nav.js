@@ -9,12 +9,14 @@ fetch("https://ad-productivity-app.herokuapp.com/notes")
     menu.innerHTML += notes
       .map(({ id, name }) => {
         return `
-        <a class="menu-item" href="./viewing_screen/view.html?id=${id}">
+        <a class="menu-item" href="./view.html?id=${id}">
           ${name}
         </a>`;
       })
       .join("");
   });
+
+
 
 menu_toggle.addEventListener("click", () => {
   menu_toggle.classList.toggle("is-active");
